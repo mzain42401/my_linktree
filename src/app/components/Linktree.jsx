@@ -75,7 +75,7 @@ export default function Linktree() {
             >
               <Button
                 variant="outline"
-                className={`w-full text-left flex items-center justify-between group hover:bg-blue-600 hover:text-white rounded transition-all duration-300 ${isDarkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-200'}`}
+                className={`w-full text-left flex items-center justify-between group hover:bg-blue-600 hover:text-white rounded transition-all duration-300 ${isDarkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-800'}`}
                 asChild
               >
                 <a href={link.url} target="_blank" rel="noopener noreferrer">
@@ -105,7 +105,7 @@ export default function Linktree() {
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ delay: 0.5 + index * 0.1 }}
               >
-                <Badge variant="secondary" className="text-sm rounded cursor-pointer text-gray-800 bg-blue-400 hover:bg-blue-200">
+                <Badge variant="secondary" className={`text-sm rounded cursor-pointer ${isDarkMode?"text-gray-800":"text-gray-200"} hover:text-gray-800 ${isDarkMode?"bg-blue-400":"bg-gray-800"} hover:bg-gray-300`}>
                   {skill}
                 </Badge>
               </motion.div>
